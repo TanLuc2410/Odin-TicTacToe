@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+:root {
+    --white: #fffbfb;
+    --grey: #f0eef1;
+    --black: #050505;
+    --btn-hover: #a1a1aa;
+    --box-shadow: rgba(0, 0, 0, 0.16) 0px 2px 4px;
+} 
+
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    outline: none;
+    box-sizing: border-box;
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+body {
+    min-height: 100vh;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas: 
+    "header"
+    "main"
+    "footer";
+    font-size: 14px;
+    font-family: 'Poppins';
+}
+/*========================HEADER======================*/
+header {
+    grid-area: header;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 14rem;
+    background-color: var(--white);
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 2px 4px; 
+    position: relative;
+}
+header h1 {
+    font-weight: 700;
+    font-size: 4rem;
+}
+
+/*========================MAIN======================*/
+
+main {
+    grid-area: main;
+    background-color: var(--grey);
+    width: 100%;
+    padding: 1.2rem 14rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px;
+}
+main > div {
+    text-align: center;
+}
+main > .restart-button {
+    padding: 20px 40px;
+    font-size: 30px;
+    border-radius: 7px;
+    background-color: var(--white);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 2.5rem;
+    border: 2px solid #475569;
+    box-shadow: var(--box-shadow);
+
+    margin-top: 24px;
+}
+main > .restart-button:hover {
+    background-color: #e5e7eb;
+}
+.playerTurn {
+    font-size: 35px;
+    margin-bottom: 24px;
+}
+.board {
+    width: 404px;
+    height: 404px;
+    display: grid;
+    grid-template-columns: repeat(3, 134px);
+    border: 2px solid black;
+    padding: 0;
+}
+.cell {
+    border: 1px solid black;
+    height: 134px;
+    cursor: pointer;
+    text-align: center;
+    user-select: none;
+    font-size: 60px;
+    background-color: var(--white);
+    transition: all 0.2s ease ;
+}
+.cell:hover {
+    background-color: #cbd5e1;
+}
+
+/*========================FOOTER======================*/
+
+footer {
+    grid-area: footer;
+    background-color: var(--grey);
+    padding: 0.8rem;
+    text-align: center;
+    font-family: 'Poppins';
+    font-weight: 500;
+    font-size: 18px;
+}
+footer a {
+    color: var(--black);
+    transition: all 1s ease;
+}
+footer a:hover {
+    text-decoration: none;
+}
+footer a:visited {
+    color: var(--black);
+}
+footer a:active {
+    color: var(--black);
+}
